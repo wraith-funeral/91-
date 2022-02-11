@@ -38,8 +38,9 @@ def main(url_main):
 
 if __name__ == '__main__':
     # 爬取的视频菜单主页
+    url = input('输入视频列表页面的网站(推荐使用复制粘贴)')
     start_page = int(input('请输入起始页码'))
     end_page = int(input('请输入结束页码'))
     for page in range(start_page, end_page + 1):
-        url_main = 'https://91porny.com/author/%E6%A0%A1%E6%9C%8D%E7%BB%88%E7%BB%93%E8%80%85&page=' + str(page)
+        url_main = url + str(page)
         main(url_main)
